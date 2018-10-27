@@ -1,18 +1,19 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomePage from './components/HomePage.vue';
+import LandingPage from './components/LandingPage.vue';
 import Map from './components/Map.vue';
 import Login from './components/Login.vue';
 import Signup from './components/Signup.vue';
+import Home from './components/Home.vue';
 
 Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
       {
-          path: '/',
-          name: 'home',
-          component: HomePage,
+        path: '/',
+        name: 'landing',
+        component: LandingPage,
       },
       {
         path: '/map',
@@ -27,6 +28,16 @@ export default new VueRouter({
       {
         path: '/signup',
         name: 'signup',
+        component: Signup,
+      },
+      {
+        path: '/home',
+        name: 'home',
+        component: Home,
+      },
+      {
+        path: '/vote',
+        name: 'vote',
         component: Signup,
       },
     ]

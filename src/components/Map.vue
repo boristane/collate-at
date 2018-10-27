@@ -29,6 +29,7 @@ export default {
   name: 'App',
   mounted () {
     this.scatter();
+    // this.loadData();
   },
   methods: {
     getScales () {
@@ -82,7 +83,7 @@ export default {
       svg.append('g')
         .classed('axis', true)
         .call(yAxis)
-    }
+    },
   }
 }
 </script>

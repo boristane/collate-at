@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view :ngoUser="ngoUser"/>
   </div>
 </template>
 
 <script>
-import Map from './components/Map.vue';
-
 export default {
   name: 'app',
-  components: {
-    Map,
-  }
+  data () {
+    const ngoUser = {
+      ngo: '1254896445',
+      state: 'Kano',
+      lga: 'Demse',
+    };
+    return {
+      ngoUser
+    };
+  },
 }
 </script>
 

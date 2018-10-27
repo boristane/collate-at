@@ -9,7 +9,7 @@
 
         <input type="password" placeholder="Password" name="psw" required class="u-full-width">
             
-        <button type="submit" class="u-full-width">Login</button>
+        <button type="submit" class="u-full-width" @click.prevent="login">Login</button>
       </div>
 
       <div>
@@ -28,6 +28,11 @@ export default {
   components: {
     Header,
   },
+  methods: {
+    login () {
+      this.$router.push('home');
+    }
+  }
 }
 </script>
 
@@ -35,6 +40,10 @@ export default {
 .container {
   width: 400px;
   margin: 100px auto;
+  text-align: center;
+}
+
+.title {
   text-align: center;
 }
 </style>
