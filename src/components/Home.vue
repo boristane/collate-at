@@ -31,17 +31,13 @@ export default {
   ],
   methods: {
     vote () {
-      // eslint-disable-next-line
-      console.log('voting');
       this.$router.push('vote');
     },
     report () {
-      // eslint-disable-next-line
-      console.log('report');
+      this.$router.push('report');
     },
     emergency () {
-      // eslint-disable-next-line
-      console.log('emergency');
+      this.$router.push('emergency');
     },
     logout () {
       this.$router.push('login');

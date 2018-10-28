@@ -5,6 +5,9 @@ import Map from './components/Map.vue';
 import Login from './components/Login.vue';
 import Signup from './components/Signup.vue';
 import Home from './components/Home.vue';
+import Emergency from './components/Emergency.vue';
+import Vote from './components/Vote.vue';
+import Report from './components/Report.vue';
 
 Vue.use(VueRouter);
 
@@ -36,9 +39,19 @@ export default new VueRouter({
         component: Home,
       },
       {
+        path: '/emergency',
+        name: 'emergency',
+        component: Emergency,
+      },
+      {
         path: '/vote',
         name: 'vote',
-        component: Signup,
+        component: Vote,
+      },
+      {
+        path: '/report',
+        name: 'report',
+        component: Report,
       },
     ]
 });

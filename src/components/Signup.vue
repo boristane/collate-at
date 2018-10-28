@@ -10,6 +10,8 @@
         <input type="email" placeholder="E-Mail" name="email" required class="u-full-width">
 
         <input type="text" placeholder="ID Number" name="id" required class="u-full-width">
+
+        <input type="password" placeholder="Password" name="psw" required class="u-full-width">
         <div class="row">
           <div class="six columns">
             <label for="exampleEmailInput">State</label>
@@ -25,7 +27,7 @@
           </div>
         </div>
             
-        <button type="submit" class="u-full-width">Sign Up</button>
+        <button class="u-full-width" @click.prevent="home">Sign Up</button>
       </div>
     </form>
   </div>
@@ -80,6 +82,11 @@ export default {
         'Zamfara',
       ],
       lgas: ['Bende', 'Ohafia', 'Demse', 'Fufore', 'Abat', 'Eket', 'Ihala'],
+    }
+  },
+  methods: {
+    home () {
+      this.$router.push('login');
     }
   }
 }
